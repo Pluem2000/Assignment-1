@@ -34,7 +34,7 @@ axios.get(url)
         }
       }
 
-      console.log("เงินต้น :" + "290,000 USDT");
+      console.log("เงินต้น :" + " 290,000 USDT");
       console.log("เงินทอน : " + usdtAmount+ " USDT");
       console.log("จำนวนเหรียญ BTC : " + totalBTC + " BTC");
     }
