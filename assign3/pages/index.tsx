@@ -30,7 +30,7 @@ axios.get(url)
           console.log("Test1");
 
         } else {
-          console.log("test2");
+          console.log("Test2");
         }
       }
 
