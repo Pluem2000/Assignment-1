@@ -10,22 +10,19 @@ axios.get(url).then((response) => {
   function calculateOutputAmount() {
     
     let coin: number = 0;
-    let usdtAmount: number = 290000;
+    let usdtAmount: number = 29000;
     let value = usdtAmount;
 
     result.asks.map((item: number[], index: number) => {
       const usdt: number = +item[0];
       const btc: number = +item[1];
-      const allBTC = value / usdt;
+      const allBTC = value / (usdt * btc);
       if (value > 0) {
         let totalBTC;
         if (allBTC > btc) {
           totalBTC = coin + btc;
         } else {
           totalBTC = coin + allBTC;
-
-          value = value - usdt * (totalBTC - coin);
-          coin = totalBTC;
         }
         value = value - usdt * (totalBTC - coin);
         coin = totalBTC;
@@ -34,7 +31,7 @@ axios.get(url).then((response) => {
     console.log("Input USDT: " + usdtAmount);
     console.log("Output BTC: " + coin);
   }
-  console.log(calculateOutputAmount());
+  calculateOutputAmount();
 });
 
 export default function IndexPage() {
