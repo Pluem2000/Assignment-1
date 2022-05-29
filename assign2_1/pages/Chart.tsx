@@ -1,16 +1,16 @@
 import Link from 'next/link'
 
-export default function FirstPost() {
+export default function MarketDiff() {
   return (
     <>
       <div style={{ marginLeft: 50 }}>
         <li>
-          <Link href="/">
+          <Link href="/MarketDiff">
             <a>Market Diff</a>
           </Link>
         </li>
         <li>
-          <Link href="/Chart">
+          <Link href="/">
             <a>Chart</a>
           </Link>
         </li>
@@ -22,7 +22,7 @@ export default function FirstPost() {
       </div>
 
       <div style={{ marginLeft: 50 }}>
-        <h1>Market Diff</h1>
+        <h1>Chart</h1>
         <h3>Token 1</h3>
         <input style={{ height: 25 }}></input>
         <h3>Token 2</h3>
