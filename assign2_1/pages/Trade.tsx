@@ -1,5 +1,7 @@
 import React from "react";
+import TradeBS from "../components/TradeBS";
 import TradeForm from "../components/TradeForm";
+import TradeHistory from "../components/TradeHistory";
 import TradeList from "../components/TradeList";
 import NavLayout from "../layouts/NavLayout";
 
@@ -13,6 +15,12 @@ const trade = () => {
         </div>
         <div className="flex w-full px-20 -top-10 relative">
           <TradeList />
+        </div>
+        <div className="flex w-full px-20 -top-10 relative">
+          <TradeBS />
+        </div>
+        <div className="flex w-5/6 px-20 top-5 relative">
+          <TradeHistory />
         </div>
       </div>
     </NavLayout>
