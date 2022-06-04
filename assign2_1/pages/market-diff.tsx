@@ -4,6 +4,7 @@ import MarketDiffList from "../components/MarketDiffList";
 import NavLayout from "../layouts/NavLayout";
 
 const MarketDiff = () => {
+    
     return (
         <NavLayout>
             <div className="bg-lightbg min-h-screen">

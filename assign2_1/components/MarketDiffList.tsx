@@ -8,7 +8,7 @@ const MarketDiffList = () => {
       </div>
       <div className="flex px-40 -py-6 w-screen">
         <table className="rounded-lg shadow-lg w-5/6 text-left text-lg bg-white ">
-          <thead>
+          <thead className="border-b-2">
             <tr>
               <th className="p-4">Token 1</th>
               <th className="p-4">Token 2</th>

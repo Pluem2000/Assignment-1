@@ -3,7 +3,7 @@ import React from 'react'
 const TradeList = () => {
     return (
         <div className="flex">
-            <div className="flex pl-44 pr-20">
+            <div className="flex pl-44 pr-20 relative">
                 <table className="text-left">
                     <thead>
                         <p className="text-2xl font-bold pl-6">Asks</p>
