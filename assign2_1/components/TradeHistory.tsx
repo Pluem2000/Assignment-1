@@ -4,7 +4,7 @@ const TradeHistory = () => {
   return (
     <div>
       <div className="flex pl-32  w-screen">
-        <h3 className="text-left text-2xl font-bold pb-4">Oder History</h3>
+        <h3 className="text-left text-2xl font-bold pb-4">Order History</h3>
       </div>
       <div className="flex w-5/6 pl-32 pb-4">
         <table className="rounded-lg shadow-lg w-5/6 text-left text-lg bg-white ">
