@@ -62,9 +62,8 @@ const ChartGraph = () => {
         {MENUS.map((menu) => (
           <Link key={menu.href} href={menu.href}>
             <a
-              className={`hover:text-lightblue transition font-medium ${
-                router.pathname === menu.href ? "text-lightblue" : ""
-              }`}
+              className={`hover:text-lightblue transition font-medium ${router.pathname === menu.href ? "text-lightblue" : ""
+                }`}
             >
               {menu.text}
             </a>
