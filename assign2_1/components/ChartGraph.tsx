@@ -4,27 +4,27 @@ import { useRouter } from "next/router";
 
 const MENUS = [
   {
-    href: "/",
+    href: "/chart",
     text: "30M",
   },
   {
-    href: "/",
+    href: "/chart",
     text: "1H",
   },
   {
-    href: "/",
+    href: "/chart",
     text: "24H",
   },
   {
-    href: "/",
+    href: "/chart",
     text: "1W",
   },
   {
-    href: "/",
+    href: "/chart",
     text: "1M",
   },
   {
-    href: "/",
+    href: "/chart",
     text: "1Y",
   },
 
@@ -62,7 +62,7 @@ const ChartGraph = () => {
         {MENUS.map((menu) => (
           <Link key={menu.href} href={menu.href}>
             <button
-              className={`bg-white rounded-lg hover:bg-blue-400 active:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 ${router.pathname === menu.href ? "text-lightblue" : ""
+              className={`bg-white rounded-lg hover:bg-blue-400 focus:ring focus:outline-2 focus:ring-blue-300 focus:bg-blue-400 ${router.pathname === menu.href ? "text-black" : ""
                 }`}
             >
               {menu.text}
