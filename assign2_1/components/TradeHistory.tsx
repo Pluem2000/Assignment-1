@@ -7,7 +7,7 @@ const TradeHistory = () => {
         <h3 className="text-left text-2xl font-bold pb-4">Order History</h3>
       </div>
       <div className="flex w-5/6 pl-32 pb-4">
-        <table className="rounded-lg shadow-lg w-5/6 text-left text-lg bg-white ">
+        <table className="rounded-lg shadow-lg w-full text-left text-lg bg-white ">
           <thead className="border-b-2">
             <tr>
               <th className="p-4">Order ID</th>
