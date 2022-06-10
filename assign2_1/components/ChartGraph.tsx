@@ -91,7 +91,7 @@ const ChartGraph = () => {
       <div className="flex absolute top-24">
         <p className="text-2xl font-bold">45,212.30</p>
         <p className="text-md mt-1 ml-4 text-slate-400">BTC/USDT</p>
-        <p className="text-md mt-1 ml-4 text-red-600">-0.001(-2.14%)</p>
+        <p className="text-md mt-1 ml-4 text-red-600 font-bold">-0.001(-2.14%)</p>
       </div>
       <div className="flex absolute top-36">
         <p className="text-md mt-1 ml-0 text-slate-400">Apr 05,2022, 07:37 PM</p>

@@ -2,21 +2,19 @@ import React from 'react'
 
 const TradeHistory = () => {
   return (
-    <div>
-      <div className="flex pl-32  w-screen">
-        <h3 className="text-left text-2xl font-bold pb-4">Order History</h3>
-      </div>
-      <div className="flex w-5/6 pl-32 pb-4">
-        <table className="rounded-lg shadow-lg w-full text-left text-lg bg-white ">
+    <div className="border-5 border-black sm:w-full mb-4 w-full max-w-4xl">
+      <h3 className="text-left text-3xl font-bold ">Order History</h3>
+      <div className=" w-full max-x-4xl overflow-x-auto md:overflow-hidden relative bg-white rounded-lg mt-4 border-2 border-blue">
+        <table className="w-full text-center">
           <thead className="border-b-2">
             <tr>
-              <th className="p-4">Order ID</th>
-              <th className="p-4">Date</th>
-              <th className="p-4">Symbol</th>
-              <th className="p-4">Type</th>
-              <th className="p-4">Price</th>
-              <th className="p-4">Input</th>
-              <th className="p-4">Output</th>
+              <th className="w-28 p-4">Order</th>
+              <th className="w-28 p-4">Date</th>
+              <th className="w-28 p-4">Symbol</th>
+              <th className="w-28 p-4">Type</th>
+              <th className="w-28 p-4">Price</th>
+              <th className="w-28 p-4">Input</th>
+              <th className="w-28 p-4">output</th>
             </tr>
           </thead>
           <tbody>
@@ -27,7 +25,7 @@ const TradeHistory = () => {
               <td className="p-4">Buy</td>
               <td className="p-4">40,000</td>
               <td className="p-4">10,000</td>
-              <td className="p-4">0.3</td>
+              <td className="p-4 text-center">0.3</td>
             </tr>
             <tr>
               <td className="p-4">#2</td>
@@ -36,7 +34,7 @@ const TradeHistory = () => {
               <td className="p-4">Sell</td>
               <td className="p-4">40,000</td>
               <td className="p-4">10,000</td>
-              <td className="p-4">0.3</td>
+              <td className="p-4 text-center">0.3</td>
             </tr>
           </tbody>
         </table>
