@@ -37,16 +37,16 @@ const Home: NextPage = () => {
 
   const addTokenToWallet = async (token: Token) => {
     try {
-      // wasAdded is a boolean. Like any RPC method, an error may be thrown.
+     
       const wasAdded = await window.ethereum.request({
         method: "wallet_watchAsset",
         params: {
-          type: "ERC20", // Initially only supports ERC20, but eventually more!
+          type: "ERC20",
           options: {
-            address: token.address, // The address that the token is at.
-            symbol: token.symbol, // A ticker symbol or shorthand, up to 5 chars.
-            decimals: token.decimals, // The number of decimals in the token
-            image: token.imageUrl, // A string url of the token logo
+            address: token.address,
+            symbol: token.symbol, 
+            decimals: token.decimals, 
+            image: token.imageUrl, 
           },
         },
       });
@@ -124,7 +124,7 @@ const Home: NextPage = () => {
                   <img
                     onClick={() => addTokenToWallet(token)}
                     src={token.imageUrl}
-                    className="w-12 h-12 mr-8 cursor-pointer"
+                    className="w-10 h-10 mr-8 cursor-pointer"
                   />
                 </div>
                 <div>
