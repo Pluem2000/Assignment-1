@@ -6,6 +6,7 @@ const Home: NextPage = () => {
     <div>
       <Topbar/>
     </div>
+    
   );
 };
 

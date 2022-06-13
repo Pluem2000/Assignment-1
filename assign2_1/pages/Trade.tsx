@@ -13,13 +13,13 @@ const trade = () => {
           <TradeForm />
           <div className="bg-darkbg h-full w-full absolute -top-20" />
         </div>
-        <div className="flex justify-center w-full -top-10 relative">
+        <div className="flex justify-center -top-10 relative">
           <TradeList />
         </div>
         <div className="flex justify-center w-full -top-10 relative">
           <TradeBS />
         </div>
-        <div className="flex justify-center w-full -top-10 relative">
+        <div className="flex justify-center w-full px-16 -top-10 relative">
           <TradeHistory />
         </div>
       </div>

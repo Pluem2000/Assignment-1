@@ -74,9 +74,9 @@ const TradeBS = () => {
 
     <div className="rounded-lg w-full max-w-4xl p-12 z-20 relative">
       <form>
-        <div className="flex flex-col sm:flex-row justify-around mb-5">
+        <div className="flex flex-col sm:flex-row mb-5">
           <div>
-            <p className="text-lg">Amount</p>
+            <p className="text-left text-2xl font-bold">Amount</p>
             <input
               className="p-3 mt-5 rounded shadow w-full"
               type="text"
@@ -89,7 +89,7 @@ const TradeBS = () => {
             </div>
           </div>
           <div>
-            <p className="text-lg">Amount</p>
+            <p className="text-left text-2xl font-bold">Amount</p>
             <input
               className="p-3 mt-5 rounded shadow w-full"
               type="text"
