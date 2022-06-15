@@ -16,6 +16,7 @@ import {
 } from "../constants/network-id";
 import { formatEther, formatUnits } from "ethers/lib/utils";
 import { Token } from "../types/token.type";
+import Topbar from "../component/topbar";
 
 const Home: NextPage = () => {
   const [address, setAddress] = useState<string | null>(null);
@@ -37,16 +38,16 @@ const Home: NextPage = () => {
 
   const addTokenToWallet = async (token: Token) => {
     try {
-     
+
       const wasAdded = await window.ethereum.request({
         method: "wallet_watchAsset",
         params: {
           type: "ERC20",
           options: {
             address: token.address,
-            symbol: token.symbol, 
-            decimals: token.decimals, 
-            image: token.imageUrl, 
+            symbol: token.symbol,
+            decimals: token.decimals,
+            image: token.imageUrl,
           },
         },
       });
@@ -107,47 +108,52 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      {address ? (
-        <div>
-          <p>Your wallet address is {address}</p>
-          <p>
-            Current network is {getNetworkName(network)} ({network})
-          </p>
-          <p>
-            Your balance is {balance} {getNetworkCurrency(network)}
-          </p>
-          <h4 className="font-bold text-lg">Token list</h4>
+      <div>
+        <Topbar />
+      </div>
+      <div>
+        {address ? (
           <div>
-            {getNetworkTokens(network).map((token) => (
-              <div key={token.symbol} className="flex mb-4">
-                <div>
-                  <img
-                    onClick={() => addTokenToWallet(token)}
-                    src={token.imageUrl}
-                    className="w-10 h-10 mr-8 cursor-pointer"
-                  />
-                </div>
-                <div>
+            <p>Your wallet address is {address}</p>
+            <p>
+              Current network is {getNetworkName(network)} ({network})
+            </p>
+            <p>
+              Your balance is {balance} {getNetworkCurrency(network)}
+            </p>
+            <h4 className="font-bold text-lg">Token list</h4>
+            <div>
+              {getNetworkTokens(network).map((token) => (
+                <div key={token.symbol} className="flex mb-4">
                   <div>
-                    {token.name} ({token.symbol})
+                    <img
+                      onClick={() => addTokenToWallet(token)}
+                      src={token.imageUrl}
+                      className="w-10 h-10 mr-8 cursor-pointer"
+                    />
                   </div>
                   <div>
-                    {tokenBalances[token.symbol] || 0} {token.symbol}
+                    <div>
+                      {token.name} ({token.symbol})
+                    </div>
+                    <div>
+                      {tokenBalances[token.symbol] || 0} {token.symbol}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      ) : (
-        <button
-          type="button"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-          onClick={connectWallet}
-        >
-          Connect
-        </button>
-      )}
+        ) : (
+          <button
+            type="button"
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            onClick={connectWallet}
+          >
+            Connect
+          </button>
+        )}
+      </div>
     </div>
   );
 };

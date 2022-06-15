@@ -15,7 +15,7 @@ const ChartForm = () => {
             />
           </div>
           <div>
-            <p className="text-lg ml-4">Token 2</p>
+            <p className="text-lg">Token 2</p>
             <input
               className="p-3 mt-5 rounded shadow w-full"
               type="text"
