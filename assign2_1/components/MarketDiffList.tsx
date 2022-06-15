@@ -5,7 +5,7 @@ const MarketDiffList = () => {
     <div className="border-5 border-black sm:w-full mb-4 w-full max-w-4xl">
       <p className="font-bold text-3xl pb-2">List</p>
       <div className="relative overflow-x-auto shadow-lg sm:rounded-lg max-x-4xl">
-        <table className="w-full text-center">
+        <table className="w-full text-left">
           <thead className="border-b-2 bg-white rounded-md">
             <tr>
               <th className="w-28 p-4">
