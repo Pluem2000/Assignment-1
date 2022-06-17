@@ -16,6 +16,7 @@ import {
 } from "../constants/network-id";
 import { formatEther, formatUnits } from "ethers/lib/utils";
 import { Token } from "../types/token.type";
+import Topbar from "../components/Topbar";
 
 const Home: NextPage = () => {
   const [address, setAddress] = useState<string | null>(null);
@@ -37,16 +38,16 @@ const Home: NextPage = () => {
 
   const addTokenToWallet = async (token: Token) => {
     try {
-      
+
       const wasAdded = await window.ethereum.request({
         method: "wallet_watchAsset",
         params: {
-          type: "ERC20", 
+          type: "ERC20",
           options: {
-            address: token.address, 
-            symbol: token.symbol, 
-            decimals: token.decimals, 
-            image: token.imageUrl, 
+            address: token.address,
+            symbol: token.symbol,
+            decimals: token.decimals,
+            image: token.imageUrl,
           },
         },
       });
@@ -107,47 +108,60 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      {address ? (
-        <div>
-          <p>Your wallet address is {address}</p>
-          <p>
-            Current network is {getNetworkName(network)} ({network})
-          </p>
-          <p>
-            Your balance is {balance} {getNetworkCurrency(network)}
-          </p>
-          <h4 className="font-bold text-lg">Token list</h4>
-          <div>
-            {getNetworkTokens(network).map((token) => (
-              <div key={token.symbol} className="flex mb-4">
-                <div>
-                  <img
-                    onClick={() => addTokenToWallet(token)}
-                    src={token.imageUrl}
-                    className="w-12 h-12 mr-8 cursor-pointer"
-                  />
-                </div>
-                <div>
-                  <div>
-                    {token.name} ({token.symbol})
-                  </div>
-                  <div>
-                    {tokenBalances[token.symbol] || 0} {token.symbol}
-                  </div>
-                </div>
+      <Topbar />
+      <div className="bg-blue-50 min-h-screen pt-4">
+        {address ? (
+          <div className="flex justify-center bg-blue-50 pt-4">
+            <div className="rounded-2xl shadow-xl w-full max-w-2xl p-12 border border-indigo-600">
+              <div className="flex justify-center">
+                <h4 className="rounded-lg bg-blue-900 text-white px-10 py-2 text-xl font-bold">
+                  Wallet
+                </h4>
               </div>
-            ))}
+              <div className="flex flex-col sm:flex-row justify-between text-gray-600 font-bold mb-5">
+                <p className="text-lg">Assets</p>
+                <p className="text-lg ml-4">Balances</p>
+              </div>
+
+              {getNetworkTokens(network).map((token) => (
+                <div
+                  key={token.symbol}
+                  className="flex mb-4 bg-white p-6 rounded-2xl"
+                >
+                  <div>
+                    <img
+                      onClick={() => addTokenToWallet(token)}
+                      src={token.imageUrl}
+                      className="w-12 h-12 mr-8 cursor-pointer"
+                    />
+                  </div>
+                  <div>
+                    <div>
+                      {token.name} ({token.symbol})
+                    </div>
+                    <div>
+                      {tokenBalances[token.symbol] || 0} {token.symbol}
+                    </div>
+                  </div>
+                </div>
+              ))}
+              <div className="flex justify-center mt-10">
+                <button className="rounded-lg bg-blue-600 text-white px-10 py-2 text-xl font-bold">
+                  Scan QR
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      ) : (
-        <button
-          type="button"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-          onClick={connectWallet}
-        >
-          Connect
-        </button>
-      )}
+        ) : (
+          <button
+            type="button"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={connectWallet}
+          >
+            Connect
+          </button>
+        )}
+      </div>
     </div>
   );
 };
