@@ -83,18 +83,26 @@ const TradeBS = () => {
               placeholder="Amount"
             />
 
-            {/* <button id="dropdownDefault" data-dropdown-toggle="dropdown" className="absolute top-auto text-blue-400 bg-white border-blue-400 border-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">USDT<svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg></button>
-
-            <div id="dropdown" className="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700">
-              <ul className="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-                <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">BTC</a>
-                </li>
-                <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">USDT</a>
-                </li>
-              </ul>
-            </div> */}
+            <select className="form-select appearance-none
+      block
+      w-20
+      px-3
+      py-1.5
+      text-base
+      font-normal
+      text-gray-700
+      bg-white bg-clip-padding bg-no-repeat
+      border border-solid border-gray-300
+      rounded
+      transition
+      ease-in-out
+      ml-72
+      -mt-11
+      absolute
+      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+              <option selected>USDT</option>
+              <option value="1">BTC</option>
+            </select>
 
             <div className="pt-2">
               <button className="text-center p-3 mt-5 rounded shadow w-full bg-green-500 text-white">
@@ -110,18 +118,26 @@ const TradeBS = () => {
               placeholder="Amount"
             />
 
-            {/* <button id="dropdownDefault" data-dropdown-toggle="dropdown" className="absolute text-blue-400 bg-white border-blue-400 border-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">USDT<svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg></button>
-
-            <div id="dropdown" className="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700">
-              <ul className="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-                <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">BTC</a>
-                </li>
-                <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">USDT</a>
-                </li>
-              </ul>
-            </div> */}
+            <select className="form-select appearance-none
+      block
+      w-20
+      px-3
+      py-1.5
+      text-base
+      font-normal
+      text-gray-700
+      bg-white bg-clip-padding bg-no-repeat
+      border border-solid border-gray-300
+      rounded
+      transition
+      ease-in-out
+      ml-72
+      -mt-11
+      absolute
+      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+              <option selected>USDT</option>
+              <option value="1">BTC</option>
+            </select>
 
             <div className="pt-2">
               <button className="text-center p-3 mt-5 rounded shadow w-full bg-red-700 text-white">

@@ -54,8 +54,8 @@ const ChartGraph = () => {
   // chart.timeScale().fitContent();
 
   return (
-    <div className="flex justify-between items-center ml-36 px-20 py-4 pb-48 bg-white rounded-lg shadow-lg relative">
-      <div className="flex">
+    <div className="flex flex-col sm:flex-row justify-between items-center w-full max-w-4xl px-16 py-3 bg-white rounded-lg shadow-lg relative">
+      <div className="flex mr-48 ">
         <img
           src="/b-logo.png"
           alt="b-logo"
@@ -76,7 +76,7 @@ const ChartGraph = () => {
         />
       </div>
 
-      <div className="flex text-black space-x-8 ml-44">
+      <div className="flex text-black space-x-7">
         {MENUS.map((menu) => (
           <Link key={menu.href} href={menu.href}>
             <button
@@ -88,14 +88,14 @@ const ChartGraph = () => {
           </Link>
         ))}
       </div>
-      <div className="flex absolute top-24">
+      {/* <div className="flex absolute top-24">
         <p className="text-2xl font-bold">45,212.30</p>
         <p className="text-md mt-1 ml-4 text-slate-400">BTC/USDT</p>
         <p className="text-md mt-1 ml-4 text-red-600 font-bold">-0.001(-2.14%)</p>
       </div>
       <div className="flex absolute top-36">
         <p className="text-md mt-1 ml-0 text-slate-400">Apr 05,2022, 07:37 PM</p>
-      </div>
+      </div> */}
     </div>
   )
 }

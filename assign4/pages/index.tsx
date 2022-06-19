@@ -108,7 +108,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <Topbar />
+      <Topbar address = {address}/>
       <div className="bg-blue-50 min-h-screen pt-4">
         {address ? (
           <div className="flex justify-center bg-blue-50 pt-4">

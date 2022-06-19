@@ -45,7 +45,7 @@ const MarketDiffList = () => {
               <td className="w-28 p-4">
                 -0.049%
               </td>
-              <td className="w-28 p-4 text-right">
+              <td className="w-20 p-4 text-right">
                 <button className=" text-white bg-red-700 rounded-md px-2 py-1">Delete</button>
               </td>
             </tr>
