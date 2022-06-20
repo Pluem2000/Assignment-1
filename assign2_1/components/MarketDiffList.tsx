@@ -45,8 +45,8 @@ const MarketDiffList = () => {
               <td className="w-28 p-4">
                 -0.049%
               </td>
-              <td className="w-20 p-4 text-right">
-                <button className=" text-white bg-red-700 rounded-md px-2 py-1">Delete</button>
+              <td className="w-20 p-4">
+                <button className=" text-white bg-red-700 rounded-md px-2 py-1 ">Delete</button>
               </td>
             </tr>
             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -65,7 +65,7 @@ const MarketDiffList = () => {
               <td className="w-28 p-4">
                 -0.033%
               </td>
-              <td className="w-28 p-4 text-right">
+              <td className="w-28 p-4">
                 <button className="text-white bg-red-700 rounded-md px-2 py-1">Delete</button>
               </td>
             </tr>

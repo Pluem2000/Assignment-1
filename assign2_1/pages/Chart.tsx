@@ -12,7 +12,7 @@ const chart = () => {
           <ChartForm />
           <div className="bg-darkbg h-full w-full absolute -top-20" />
         </div>
-        <div className="flex w-full px-20 -top-10 relative">
+        <div className="flex w-full justify-center px-16 relative">
           <ChartGraph />
         </div>
       </div>
