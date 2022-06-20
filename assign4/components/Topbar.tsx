@@ -32,57 +32,14 @@ const Topbar = (props: any) => {
         {MENUS.map((menu) => (
           <Link key={menu.href} href={menu.href}>
             <a
-              className={`hover:text-lightblue mt-2 transition font-medium ${router.pathname === menu.href ? "text-lightblue" : ""
+              className={`hover:text-lime-400 mt-2 transition font-medium ${router.pathname === menu.href ? "text-black" : ""
                 }`}
             >
               {menu.text}
             </a>
           </Link>
         ))}
-        {/* <button
-          id="dropdownBkcButton"
-          data-dropdown-toggle="bitkubchain"
-          className="text-blue-700 hover:bg-blue-200 border border-indigo-600  font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-white "
-          type="button"
-        >
-          Bitkub Chain
-          <svg
-            className="w-4 h-4 ml-2"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
-          </svg>
-        </button>
-        <button
-          id="dropdownBkcButton"
-          data-dropdown-toggle="bitkubchain"
-          className="text-blue-700 hover:bg-blue-200 border border-indigo-600  font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-white"
-          type="button"
-        >
-          {address}
-          <svg
-            className="w-4 h-4 ml-2"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
-          </svg>
-        </button> */}
+
         <select className="form-select appearance-none
       block
       w-32
@@ -100,9 +57,10 @@ const Topbar = (props: any) => {
       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
           <option selected>Bitkub Chain</option>
         </select>
+
         <select className="form-select appearance-none
       block
-      w-96
+      w-full
       px-3
       py-1.5
       text-base
