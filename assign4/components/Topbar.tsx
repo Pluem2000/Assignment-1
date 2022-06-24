@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { Bitkub } from "../constants/tokens-name";
 
 const MENUS = [
   {
@@ -19,8 +20,14 @@ const Topbar = (props: any) => {
   console.log(router.pathname);
 
   const { address } = props;
+
+  var test = "";
+  if (address != null) {
+    test = address.substring(0, 5) + "..." + address.substring(37, 42);
+  }
+
   return (
-    <nav className="flex justify-between items-center px-20 py-4 bg-white relative z-50 shadow-lg">
+    <nav className="flex justify-between items-center px-20 py-4 bg-lightblue relative z-50 shadow-lg">
       <div className="flex">
         <img
           src="https://bkf.finance/assets/bkf-logo.png"
@@ -42,24 +49,6 @@ const Topbar = (props: any) => {
 
         <select className="form-select appearance-none
       block
-      w-32
-      px-3
-      py-1.5
-      text-base
-      font-normal
-      text-black
-      bg-white bg-clip-padding bg-no-repeat
-      border border-solid border-gray-300
-      rounded
-      transition
-      ease-in-out
-      m-0
-      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
-          <option selected>Bitkub Chain</option>
-        </select>
-
-        <select className="form-select appearance-none
-      block
       w-full
       px-3
       py-1.5
@@ -73,8 +62,36 @@ const Topbar = (props: any) => {
       ease-in-out
       m-0
       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
-          <option selected>{address}</option>
+          {Bitkub.map((chainId) => (
+            <option>{chainId.chainName}</option>
+          ))}
         </select>
+
+        <select className="form-select appearance-none
+      block
+      w-32
+      px-3
+      py-1.5
+      text-base
+      font-normal
+      text-white
+      bg-blue-900 bg-opacity-100 bg-clip-padding bg-no-repeat
+      border border-solid border-gray-300
+      rounded
+      transition
+      ease-in-out
+      m-0
+      relative
+      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+          <option>{test}</option>
+        </select>
+        <div className="flex absolute translate-x-72 top-7">
+          <img
+            src="https://support.bitkub.com/hc/article_attachments/4403997327629/image.png"
+            alt="bitkub-logo"
+            className="w-[30px] h-[30px] shadow-lg rounded-full border-2"
+          />
+        </div>
       </div>
 
       <div className="flex lg:hidden">
